@@ -65,7 +65,7 @@ const BasicForm = (props) => {
       {emailIsInvalid && (
         <div className="text-red-700">Invalid email format</div>
       )}
-      <button className="self-end">Submit</button>
+      <button className="self-end" disabled={!formIsValid}>Submit</button>
     </form>
   );
 };

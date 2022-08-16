@@ -1,5 +1,5 @@
 input {
-    @apply rounded-md p-2 min-w-0 w-4/5
+    @apply rounded-md p-2 min-w-0 w-full
 }
 
 label {
@@ -7,5 +7,5 @@ label {
 }
 
 button {
-    @apply bg-gray-200 p-2 px-4 rounded-full active:bg-gray-500 transition duration-75
+    @apply bg-sky-500 p-2 px-4 rounded-full active:bg-gray-500 transition duration-75 disabled:bg-gray-200
 }
