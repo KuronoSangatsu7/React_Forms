@@ -1,10 +1,10 @@
 import useInput from "../hooks/use-input";
 import "./BasicForm.css";
 
-const BasicForm = (props) => {
-  const isNonEmpty = (value) => value.trim().length > 0;
-  const isEmail = (value) => value.includes("@") && value.includes(".");
+const isNonEmpty = (value) => value.trim().length > 0;
+const isEmail = (value) => value.includes("@") && value.includes(".");
 
+const BasicForm = (props) => {
   const {
     value: nameInputValue,
     valid: nameIsValid,
@@ -20,8 +20,8 @@ const BasicForm = (props) => {
     invalid: emailIsInvalid,
     valueChangeHandler: emailChangeHandler,
     blurChangeHandler: emailBlurHandler,
-    reset: resetEmail
-  } = useInput(isEmail)
+    reset: resetEmail,
+  } = useInput(isEmail);
 
   const formIsValid = nameIsValid && emailIsValid;
 
@@ -32,8 +32,8 @@ const BasicForm = (props) => {
     alert(
       "Thank you for filling out the form. Your chances of running into a cat today went up by 50%!"
     );
-    resetName()
-    resetEmail()
+    resetName();
+    resetEmail();
   };
 
   return (
