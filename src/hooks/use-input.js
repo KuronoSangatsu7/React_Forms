@@ -21,7 +21,7 @@ const useInput = (verify) => {
   };
 
   return {
-    value: inputValue,
+    value: enteredValue,
     valid: inputIsValid,
     invalid: inputIsInvalid,
     valueChangeHandler,
